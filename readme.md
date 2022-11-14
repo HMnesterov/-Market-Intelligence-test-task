@@ -1,5 +1,29 @@
 # Тестовое задание для стажера в Market Intelligence.
 
+## Запуск:
+
+1)git clone https://github.com/BenitoSwaggolini/-Market-Intelligence-test-task.git
+
+2)pip install -r requirements.txt
+
+3)redis-server
+
+4)uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+
+##Через Docker:
+1)git clone https://github.com/BenitoSwaggolini/-Market-Intelligence-test-task.git
+
+2)docker-compose up -d
+
+
+## API:
+
+127.0.0.1:8000/generate?text='Ваше сообщение'&secret-phrase='Ваша секретная фраза' - отдаёт назад в Json секретный ключ
+
+127.0.0.1:8000/secrets/{secret_key(с метода generate)}?secret-phrase='Секретная фраза' 
+
+
 ## Задача:
 
 Нужно сделать HTTP сервис для одноразовых секретов наподобие [https://onetimesecret.com/](https://onetimesecret.com/?locale=ru).
